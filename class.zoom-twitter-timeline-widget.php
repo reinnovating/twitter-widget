@@ -170,8 +170,6 @@ class Zoom_Twitter_Timeline_Widget extends WP_Widget {
 
 				<li class="zoom-twitter-widget__item">
 					<p class="zoom-twitter_widget__message">
-						<?php echo $text; ?>
-
 						<?php if ( $instance['show-timestamp'] ) : ?>
 
 							<a class="zoom-twitter-widget__item-permalink" href="<?php echo esc_url( $link ); ?>">
@@ -179,7 +177,11 @@ class Zoom_Twitter_Timeline_Widget extends WP_Widget {
 									<?php echo $this->human_time_diff_maybe( $time ); ?>
 								</time>
 							</a>
-
+						
+							<div class="zoom-twitter-widget__item-text">
+								<?php echo $text; ?>
+							</div>
+					
 						<?php endif; ?>
 					</p>
 				</li>
